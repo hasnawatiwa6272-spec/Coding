@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Date 💖</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#fff5e6,#ffd6e0,#c89b7b);
+  font-family:sans-serif;
+  overflow:hidden;
+}
+
+.box{
+  text-align:center;
+  background:#fff8f2;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+h1{color:#7a4d3a;}
+p{font-size:18px;color:#6b4f4f;}
+
+button{
+  border:none;
+  padding:12px 25px;
+  margin:10px;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+#yes{
+  background:#ffb6c1;
+  color:white;
+}
+
+#no{
+  background:#c89b7b;
+  color:white;
+  position:absolute;
+}
+
+.sticker{
+  position:absolute;
+  font-size:30px;
+}
+
+.s1{top:10%;left:10%;}
+.s2{top:15%;right:10%;}
+.s3{bottom:10%;left:15%;}
+.s4{bottom:10%;right:15%;}
+</style>
+</head>
+
+<body>
+
+<div class="sticker s1">📚</div>
+<div class="sticker s2">☕</div>
+<div class="sticker s3">✏️</div>
+<div class="sticker s4">💖</div>
+
+<div class="box">
+  <h1>Mau belajar bareng aku? 📚☕</h1>
+  <p id="text">Belajar sambil ngopi yuk ✨</p>
+
+  <button id="yes">Mau 💖</button>
+  <button id="no">Tidak 🙅🏻‍♀️</button>
+</div>
+
+<script>
+let no = document.getElementById("no");
+
+document.getElementById("yes").onclick = () =>{
+  document.getElementById("text").innerHTML =
+  "Yayyy 💖 Aku senang banget belajar bareng kamu!";
+}
+
+no.onmouseover = () =>{
+  no.style.left = Math.random()*80 + "%";
+  no.style.top = Math.random()*80 + "%";
+}
+</script>
+
+</body>
+</html>
